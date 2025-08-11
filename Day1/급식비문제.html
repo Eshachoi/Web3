@@ -16,20 +16,16 @@
 총 급식비는 :00000원입니다.
 */
 
-        let num1 = 8000;
-        let num2 = 23
-        let num3 = 6000;
-        let num4 = 2
-        let result;
+        let studentCost = 8000;
+        let teacherCost = 6000;
+        let studentNum = 23
+        let teacherNum = 2
+        let teacherTotalCost = teacherCost * teacherNum
+        let studetnTotalCost = studentCost * studentNum
         
-
-        result = num1 * num2 + num3 * num4
-        console.log(result);
-
-        let text = "총 급식비는"
-        let num = 196000
-        let tag = "<h1>"  + text + num + "입니다. </h1>";
-        document.write(tag)
+        let allCost = teacherTotalCost + studentTotalCost
+        
+        document.write("총 급식비는",allCost,"입니다")
     </script>
 </body>
 </html>
