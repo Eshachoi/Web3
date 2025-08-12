@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하루지출비용</title>
+</head>
+<body>
+    <script>
+        //하루지출내역을 입력받아 하루 지출 비용의 총 합계를 구한 후
+        //적정 지출 비용의 초과 여부를 출력한다
+        //교통비, 식비, 음료비
+        //3가지 항목이 10000원 이상이라면 얼마 초과했는지 알려주기, 이하라면 돈 관리 참 잘했어요~ 출력
+
+        let transportation = prompt("교통비 내역을 입력해주세요","숫자만 입력해주세요");
+        let food = prompt("식비 사용 내역을 입력해주세요","숫자만 입력해주세요");
+        let drink = prompt("음료 지출 내역을 입력해주세요","숫자만 입력해주세요");
+
+        let totalSpend = Number(transprotation) + Number(food) + Number(drink);
+
+        let result = totalSpend >= Number("10000") ? totalSpend-10000 + "원 초과했습니다.":
+        "관리를 참 잘 했어요~";   
+
+        document.write(result);
+         </script>
+</body>
+</html>
