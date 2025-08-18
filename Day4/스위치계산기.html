@@ -17,7 +17,8 @@
         let num2 = prompt("두번째 숫자를 입력하세요!");
 
         let result;
-        switch(operator){`결과 : ${num1 + num2}`);
+        switch(operator){
+            case("+"):document.write(`결과 : ${num1 + num2}`);
             break;
             case("-"): document.write(`결과 : ${num1 - num2}`);
             break;
@@ -30,10 +31,10 @@
                 document.write("0으로 나눌 수 없습니다.");
             }
             break;
-            case("%"): document.write('결과 : ${num1 % num2}');
+            case("%"): document.write(`결과 : ${num1 % num2}`);
             break;
 
-            default:document.write("유요하지 않은 연산입니다.");
+            default:document.write("유효하지 않은 연산입니다.");
 
         }
     </script>
