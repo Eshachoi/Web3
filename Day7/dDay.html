@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-Day</title>
+</head>
+<body>
+    <script>
+        //현재 날짜부터 특정 날짜까지 며칠이 남았는가
+        //특정날짜객체 - 현재 날짜객체 = 남은 일수(밀리초)
+
+        //1초 = 1,000밀리초
+        //1분 = 60초 = 60,000밀리초(1000*60)
+        //1시간(60분) = 60분 * 60초 = 3,600,000밀리초(1000*60*60)
+        //1일(24시간) = 24시간 * 3,600,000밀리초 = 86,400,000밀리초(1000*60*60*(24))
+
+        //현재연도 추출
+        let today = new Date();
+        let nowYear = today.getFullYear();
+        //올해의 12월 31일 날짜객체
+        let theDate = new Date(nowYear,11,31);
+        
+        //연말과 현재의 시간 차이 계산
+        let dDay = theDate.getTime() - today.getTime();
+        console.log(dDay);
+        console.log(theDate.getTime());
+        //1970-01-01~2-25-12-31: 1672444800000
+        console.log(today.getTime());
+        //1970-0101~2025-08-20: 1724112000000
+        let result = Math.ceil(dDay/(1000*60*60*24));
+       //ceil: 올림
+       document.write(`연말 D-day: ${result}일 남았습니다.<br>`);
+        //11446385700
+    </script>
+</body>
+</html>
