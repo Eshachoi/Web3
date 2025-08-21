@@ -7,14 +7,16 @@
 </head>
 <body>
     <script>
-        let childrenDay = new Date("2025-05-05");
-        let parentDay = new Date("2025-05-08");
-
-        let difference = parentDay.getTime() - childrenDay.getTime();
+        let childrensDay = new Date("2025-05-05");
+        let parentsDay = new Date("2025-05-08");
+        //밀리초 단위로 저장됨
+        let difference = parentsDay - childrensDay;
         console.log(difference);
 
+        let result = difference / (1000*60*60*24);
+        console.log(`어버이날과 어린이날의 차이는 ${difference}일 입니다!<br>`);
         //let result = Math(parentDay-childrenDay);
-        document.write(`어버이날과 어린이날의 차이는 ${difference}일 입니다!<br>`);
+    
     </script>
 </body>
 </html>
