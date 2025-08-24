@@ -20,7 +20,7 @@
         // && ||사용
 
         document.write("<h1>가위, 바위, 보 게임!</h1>");
-        let randonNum = Math.ceil(Math.random()*3);
+        let randomNum = Math.ceil(Math.random()*3);
         let user = prompt("가위, 바위, 보 중 하나를 입력하세요!");
         let ex;
         
@@ -32,9 +32,6 @@
             break;
             case 3: ex = "보";
             break;
-
-            default:
-                alert("잘못 입력하셨습니다. 다시 입력해주세요!")
         }
 
         if(user == ex){
@@ -44,7 +41,12 @@
                 (user == "바위" && ex == "가위") ||
                 (user == "보" && ex == "바위")){
                     document.write(`<p>축하합니다! 당신이 이겼습니다. 컴퓨터: ${ex}</p>`);
-                }
+                }else if
+                    ((user == "가위" && ex == "바위")||
+                     (user == "바위" && ex == "보")||
+                     (user == "보" && ex == "가위")){
+                        document.write(`<p>아쉽군요! 컴퓨터가 이겼습니다. 컴퓨터: ${ex}</p>`);
+                     }
 
 
     </script>
