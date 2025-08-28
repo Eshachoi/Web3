@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <script>
+        /*
+        function 함수이름(){
+            기능코드 작성
+        };
+        */
+
+        
+
+        let count = 0;
+        firstFunction();
+        function firstFunction(){
+            count++;
+            document.write(`안녕하세요 ${count}<br>`);
+            
+        }
+        firstFunction();
+        
+
+    
+        //함수는 객체(object)가 없다 00.000안씀...아래처럼
+        
+        let count2 = 100;
+       // secondFunction();
+       // ㄴ 요기 쓰면 두번째 count2가 안 읽히는 이유. 위에 퍼스트는 function으로 선언하니 {}안의 내용 먼저 읽음
+       //그런데 여기선 let 변수 선언 먼저 하니 함수 기능을 가진 변수일뿐. 
+        let secondFunction = function(){
+            count2--;
+            document.write(`안녕히계세요 ${count2}<br>`);
+        }
+        secondFunction();
+       
+    </script>
+</body>
+</html>
